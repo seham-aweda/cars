@@ -80,7 +80,7 @@ const filtered=()=>{
                         <p style={{textDecoration:car.isGold ? "none" : "line-through"}}><b><i>For Gold Employee : </i></b><span style={{color:car.isGold ? "green" : "red"}}>{car.isGold ? "Yes" : "No"}</span></p>
                         <p style={{textDecoration:car.isSenior ? "none" : "line-through"}}><b><i>For Seniors : </i></b><span style={{color:car.isSenior ? "green" : "red"}}>{car.isSenior ? "Yes" : "No"}</span></p>
                         <p><b><i>Rent Details : </i></b>{car.rentDetails.name}</p>
-                        {car.isAvailible ? <input type={"button"} name={car.id} value={"Rent"} onClick={click}/> : "Not Availible"}
+                        {car.isAvailible ? <input type={"button"} name={car.id} value={"Rent"} onClick={click}/> : <span style={{color:"red"}}>Not Availible</span>}
                         <div>
                             {car.isAvailible ?
                                 (car.isGold===true && car.isSenior===true)? <div>
